@@ -32,12 +32,12 @@ hex = "0.4"
 mime_guess = "2"
 open = "5"
 parking_lot = "0.12"
-rusqlite = { version = "0.32", features = ["bundled", "backup"] }
-rust_xlsxwriter = "0.79"
-calamine = { version = "0.26", features = ["dates"] }
-sha2 = "0.10"
+rusqlite = { version = "0.40", features = ["bundled", "backup"] }
+rust_xlsxwriter = "0.99"
+calamine = { version = "0.36", features = ["dates"] }
+sha2 = "0.11"
 tempfile = "3"
 thiserror = "2"
 uuid = { version = "1", features = ["v4", "serde"] }
 walkdir = "2"
-zip = { version = "2", default-features = false, features = ["deflate"] }
+zip = { version = "8", default-features = false, features = ["deflate"] }

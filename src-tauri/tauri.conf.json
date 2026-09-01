@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "综测记录",
+  "version": "0.1.0",
+  "identifier": "com.godbook.zongce-records",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "综测记录",
+        "width": 1360,
+        "height": 860,
+        "minWidth": 1024,
+        "minHeight": 720,
+        "center": true,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "assetProtocol": {
+        "enable": true,
+        "scope": []
+      },
+      "csp": "default-src 'self'; connect-src 'self' ipc: http://ipc.localhost https://github.com https://api.github.com https://objects.githubusercontent.com; img-src 'self' asset: http://asset.localhost blob: data:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; object-src 'none'; frame-src 'self' asset: http://asset.localhost; base-uri 'none'; form-action 'none'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "createUpdaterArtifacts": true,
+    "publisher": "GodBook",
+    "shortDescription": "大学生综合测评记录与材料管理工具",
+    "longDescription": "在本机记录综测活动、分数与证明材料，支持统计、Excel 导入导出、完整备份和签名在线更新。",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "allowDowngrades": false,
+      "nsis": {
+        "installMode": "currentUser",
+        "languages": ["SimpChinese"],
+        "displayLanguageSelector": false,
+        "installerIcon": "icons/icon.ico"
+      }
+    }
+  },
+  "plugins": {
+    "updater": {
+      "endpoints": [
+        "https://github.com/GodBook/zongce-records/releases/latest/download/latest.json"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDMwQTI0MTEzMTEzOUU2RDQKUldUVTVqa1JFMEdpTU9nSVgya3lZOUVTVTB6Z3lSSHpHYy9WbU4ybm5GN2sxUXQ0YXZkU2RnMVcK",
+      "windows": {
+        "installMode": "passive"
+      }
+    }
+  }
+}

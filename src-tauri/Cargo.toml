@@ -1,0 +1,43 @@
+[package]
+name = "zongce-records"
+version = "0.1.0"
+description = "大学生综合测评记录与材料管理工具"
+authors = ["GodBook"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "zongce_records_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["protocol-asset"] }
+tauri-plugin-dialog = "2"
+tauri-plugin-opener = "2"
+tauri-plugin-process = "2"
+tauri-plugin-updater = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4", features = ["serde"] }
+directories = "6"
+fs2 = "0.4"
+hex = "0.4"
+mime_guess = "2"
+open = "5"
+parking_lot = "0.12"
+rusqlite = { version = "0.32", features = ["bundled", "backup"] }
+rust_xlsxwriter = "0.79"
+calamine = { version = "0.26", features = ["dates"] }
+sha2 = "0.10"
+tempfile = "3"
+thiserror = "2"
+uuid = { version = "1", features = ["v4", "serde"] }
+walkdir = "2"
+zip = { version = "2", default-features = false, features = ["deflate"] }

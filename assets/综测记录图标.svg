@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">综测记录应用图标</title>
+  <desc id="desc">墨绿色圆角方形内是一张带有彩色索引和勾选标记的白色记录页</desc>
+  <rect width="1024" height="1024" rx="188" fill="#176B57"/>
+  <rect x="258" y="164" width="508" height="696" rx="72" fill="#F8FAF8"/>
+  <rect x="318" y="264" width="272" height="36" rx="18" fill="#20322B"/>
+  <rect x="318" y="340" width="374" height="22" rx="11" fill="#C7D2CC"/>
+  <rect x="318" y="398" width="308" height="22" rx="11" fill="#C7D2CC"/>
+  <rect x="318" y="456" width="348" height="22" rx="11" fill="#C7D2CC"/>
+  <rect x="724" y="286" width="74" height="72" rx="20" fill="#4079A8"/>
+  <rect x="724" y="382" width="74" height="72" rx="20" fill="#D19535"/>
+  <rect x="724" y="478" width="74" height="72" rx="20" fill="#B94E4E"/>
+  <circle cx="512" cy="646" r="116" fill="#DCECE6"/>
+  <path d="M449 648l43 43 90-104" fill="none" stroke="#176B57" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
